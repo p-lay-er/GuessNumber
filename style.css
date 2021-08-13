@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');* {
   font-size: 50px;
   margin: 0;
   padding: 0;
@@ -15,10 +14,8 @@ body {
   font-family: 'Roboto Mono', monospace;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
 }
 
-/* LAYOUT */
 header {
   position: relative;
   height: 35vh;
