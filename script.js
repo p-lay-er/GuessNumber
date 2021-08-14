@@ -32,7 +32,7 @@ function fxn() {
       changeTxt(".highscore", highScore);
       document.querySelector('body').style.backgroundColor = "#60b347";
       changeTxt('.number', ans);
-      document.querySelector('.number').style.width = "30rem";
+      document.querySelector('.number').style.width = "20%";
       win.play();
     }
     else {
