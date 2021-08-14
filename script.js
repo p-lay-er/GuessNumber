@@ -18,7 +18,7 @@ const stopAudio = function () {
 
 console.log(ans);
 let newNum;
-function fxn() {
+const fxn = function () {
   newNum = Number(document.querySelector(".guess").value);
 
   if (!(newNum > 0 && newNum <= 20)) {
@@ -52,6 +52,17 @@ function fxn() {
 }
 document.querySelector(".check").addEventListener("click", fxn);
 
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && (newNum > 0 && newNum <= 20)) {
+    fxn();
+  }
+  else if ((e.key == 'ArrowUp' || e.key == 'ArrowRight') && (newNum > 0 && newNum <= 20)) {
+    newNum++;
+  }
+  else if ((e.key == 'ArrowDown' || e.key == 'ArrowLeft') && (newNum > 0 && newNum <= 20)) {
+    newNum--;
+  }
+});
 
 document.querySelector(`.again`).addEventListener
   ("click", function () {
