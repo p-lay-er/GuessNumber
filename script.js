@@ -53,13 +53,13 @@ const fxn = function () {
 document.querySelector(".check").addEventListener("click", fxn);
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Enter' && (newNum > 0 && newNum <= 20)) {
+  if (e.key === 'Enter') {
     fxn();
   }
-  else if ((e.key == 'ArrowUp' || e.key == 'ArrowRight') && (newNum > 0 && newNum <= 20)) {
+  else if ((e.key == 'ArrowUp') && (newNum > 0 && newNum <= 20)) {
     newNum++;
   }
-  else if ((e.key == 'ArrowDown' || e.key == 'ArrowLeft') && (newNum > 0 && newNum <= 20)) {
+  else if ((e.key == 'ArrowDown') && (newNum > 0 && newNum <= 20)) {
     newNum--;
   }
 });
