@@ -10,12 +10,6 @@ const changeTxt = function (cls, txt) {
   document.querySelector(`${cls}`).textContent = txt;
 }
 
-const stopAudio = function () {
-  err.pause();
-  win.pause();
-  gameOver.pause();
-}
-
 console.log(ans);
 let newNum;
 const fxn = function () {
@@ -26,7 +20,6 @@ const fxn = function () {
   }
   else {
     if (newNum === ans) {
-      stopAudio();
       changeTxt(`.message`, "You nailed it!!🥳🥳");
       highScore = Math.max(score, highScore);
       changeTxt(".highscore", highScore);
@@ -36,7 +29,6 @@ const fxn = function () {
       win.play();
     }
     else {
-      stopAudio();
       if (score == 1) {
         changeTxt(`.message`, "You lost 😖😖");
         gameOver.play();
@@ -66,7 +58,6 @@ document.addEventListener('keydown', function (e) {
 
 document.querySelector(`.again`).addEventListener
   ("click", function () {
-    stopAudio();
     score = 20;
     ans = Math.floor(Math.random() * 20) + 1;
     changeTxt(`.message`, "Start Guessing...");
